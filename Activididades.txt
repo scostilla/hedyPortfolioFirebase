@@ -1,0 +1,97 @@
+1- FUNCIONANDO
+Crear un script que al presionar un boton 
+despliegue en la pantalla la imagen de una cara aleatoria de
+un dado de 6 caras.
+OPCIONAL:
+Renderizar un mensaje que
+indique el valor de la cara del 
+dado desplegada en el momento.
+
+2- FUNCIONANDO
+Usar un componente de clase para renderizar un mensaje de bienvenida y
+un nombre. 
+
+3- FUNCIONANDO
+Crear un componente usuarios que contenga 3 usuarios (ID,nombre,apellido) 
+Desplegarlos en la pagina
+
+4- FUNCIONANDO
+Desplegar en la pagina el componente de la clase anterior PERO:
+1-rescribiendolo como componente de función. 
+2-pasandole un prop a por lo menos 1 de los elementos a travez del componente padre.
+
+5- FUNCIONANDO
+1-Crear un componente que renderize la marca de un auto, un contador, y un boton.
+2-Al hacer click en la marca del auto, el componente se tiene que poder re renderizar
+y mostrar otra marca a eleccion del programador.
+3-Al hacer click en el boton, al contador se le tiene que sumar un numero aleatorio
+entre un valor minimo y maximo a eleccion del programador.
+(OPCIONAL:)
+4- renderizar todos los elementos de 
+un componente reactivo que sea una lista 
+a eleccion del programador
+(tiene que usar useState)
+
+6- FUNCIONANDO
+Crear una api de prueba, 
+extraer datos de la misma con funciones asincronicas o promesas,
+renderizar estos datos (Pueden usar funciones como map o filter)
+OPCIONAL: darle un poco de css a la aplicacion web.
+
+7- FUNCIONANDO  
+1-Hacer un ABM (no funcional) que se renderize o no 
+en base al click de un boton que este en el elemento padre
+2- Cambiar el css de este abm en base al click de un boton 
+(puede estar en el componente del abm o en el padre)
+
+8- FUNCIONANDO mejorar!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+1-Crear una API que tenga por lo menos 5 objetos (no pueden ser usuarios)
+y que cada uno de esos objetos tenga por lo menos 3 propiedades.
+2-crear un metodo get que reciba la informacion de alguno de esos 5 objetos
+y renderizarlo totalmente en la pagina
+3-crear un metodo post que cargue la informacion de un objeto en la API
+con el mismo template que se uso para crear los otros objetos y 
+renderizar en la pagina la informacion que se cargo.
+4-Crear un metodo delete que borre alguno de los objetos de la API
+y que renderize en la pagina la id o algun identificador del objeto borrado.
+
+9- FUNCIONANDO
+Tomar datos de la api https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=6&page=1&sparkline=false
+Y renderizar el nombre, simbolo, precio actual, MCR, MC e imagen de todos los objetos utilizando AXIOS.
+opcional: Utilizar CSS para desplegar los datos de una forma ordenada
+¡Muy importante! Recordar que si hacemos un get de toda la api
+vamos a recibir un objeto iterable, probablemente querramos
+utilizar una funcion como map para renderizar correctamente
+nuestro componente
+
+10- FUNCIONANDO
+1-Hacer un componente que renderice un titulo y un parrafo(Lorem ipsum)
+2-Al hacer click en el titulo se tiene que poder actualizar 
+el posicionamiento del mismo (izquierda,centrado,derecha). 
+3- Cuando el usuario toque una tecla especifica el color 
+y la fuente del parrafo tienen que actualizarse 
+(Tiene que haber 3 presets como minimo).
+
+11- FUNCIONANDO
+Al hacer un submit.Renderizar el nombre y una imagen de un personaje 
+en base al input del usuario.
+
+12 - FUNCIONANDO
+SyncedInputs - These two inputs are independent. Make them stay in sync: editing one input should update the other input with the same text, and vice versa.
+
+OPCIONAL: In this example, the SearchBar has its own query state that controls the text input. Its parent FilterableList component displays a List of items, but it doesn’t take the search query into account.
+Use the filterItems(foods, query) function to filter the list according to the search query. To test your changes, verify that typing “s” into the input filters down the list to “Sushi”, “Shish kebab”, and “Dim sum”.
+Note that filterItems is already implemented and imported so you don’t need to write it yourself!
+
+13- FUNCIONANDO
+Replace prop drilling with context
+In this example, toggling the checkbox changes the imageSize prop passed to each <PlaceImage>. The checkbox state is held in the top-level ContextMain component, but each <PlaceImage> needs to be aware of it.
+
+Currently, ContextMain passes imageSize to List, which passes it to each Place, which passes it to the PlaceImage. Remove the imageSize prop, and instead pass it from the App component directly to PlaceImage.
+
+You can declare context in Context.js.
+
+14 -
+Recrear la lista de la pagina https://beta.reactjs.org/learn/thinking-in-react
+
+Opcional: Darle estilo a la vista con CSS
