@@ -1,3 +1,21 @@
+@font-face {
+  font-family: "bangers";
+  src: url("./fonts/bangers-regular-webfont.woff");
+  }
+
+  @font-face {
+     font-family: "charm-bold";
+  src: url("./fonts/charm-bold-webfont.woff");
+  }
+
+  h1,h2,h3 {
+    font-family: "bangers";
+    font-size: 300%;
+  }
+  h4,a,label{
+    color: #f2f2f2;
+    font-family: "charm-bold";
+  }
 .App {
   text-align: center;
 }
@@ -46,7 +64,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: screen;
-  background-color: gainsboro;
+  background-color: #455a64;
 }
 .title{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -149,4 +167,9 @@ text-align: left;
 }
 .original-background{
   background-color: gainsboro;
+}
+
+.input{
+  margin: 10px;
+
 }

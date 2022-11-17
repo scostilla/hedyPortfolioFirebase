@@ -16,6 +16,7 @@ import SyncedInputs from "./SyncedInputs.js";
 import ContextMain from "./ContextMain.js";
 import ThinkingInReact from "./ThinkingInReact.js";
 
+
 const Home = () => {
   const [getName, setName] = useState("");
   const [getUserName, setUserName] = useState("");
@@ -25,11 +26,13 @@ const Home = () => {
 
   return (
     <Router>
+      <h1 align="center">Hedy Portfolio - Sebastian R. Costilla</h1>
       <div className="nest-header">
-        <Link to={"./RollTheDice"}>Actividad 1 - Girar el Dado</Link>
+        <h4><Link to={"./RollTheDice"}>Actividad 1 - Girar el Dado</Link>
         <p />
         <Link to={"./Welcome"}>Actividad 2 - Mensaje de Bienvenida </Link>
         <input
+        className="input"
           type="text"
           value={getName}
           onChange={(e) => setName(e.target.value)}
@@ -41,18 +44,21 @@ const Home = () => {
         <Link to={"./UsersFunction"}>Actividad 4 - Funcion Usuarios </Link>
         <input
           type="text"
+          className="input"
           value={getUserName}
           onChange={(e) => setUserName(e.target.value)}
           placeholder="Nombre de usuario"
         />
         <input
           type="text"
+          className="input"
           value={getFirstName}
           onChange={(e) => setFirstName(e.target.value)}
           placeholder="Nombre"
         />
         <input
           type="text"
+          className="input"
           value={getLastName}
           onChange={(e) => setLastName(e.target.value)}
           placeholder="Apellido"
@@ -86,7 +92,7 @@ const Home = () => {
         <Link to={"./ContextMain"}>Actividad 13 - React Context </Link>
         <p />
         <Link to={"./ThinkingInReact"}>Actividad 14 - Thinking In React </Link>
-
+        </h4>
         <Routes>
           <Route path="/RollTheDice" element={<RollTheDice />} />
           <Route path="/Welcome" element={<Welcome name={getName} />} />
