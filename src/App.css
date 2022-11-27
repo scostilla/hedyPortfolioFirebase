@@ -241,11 +241,19 @@ body {
   text-align: left;
 }
 
-.new-background {
+#light .new-background {
   background-color: rgb(169, 165, 214);
 }
-.original-background {
-  background-color: gainsboro;
+#light .original-background {
+  background-color: rgb(87, 85, 85);
+}
+
+#dark .new-background {
+  background-color: rgb(87, 85, 85);
+}
+#dark .original-background {
+  
+  background-color: rgb(169, 165, 214);
 }
 
 .input {

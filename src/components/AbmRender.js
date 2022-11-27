@@ -1,10 +1,12 @@
 import { useParams } from "react-router-dom";
 import React, { useState } from "react";
 import "../App.css";
+import { useTheme } from "../contexts/ThemeProvider";
 
 export const AbmRender = (props) => {
     const [abmClass, SetAbmClass] = useState("abm-container-red");
     const [getBackgroundColor,setBackgroundColor] = useState("original-background");
+    const { toggleTheme, themeName, theme } = useTheme();
   
     if (!props.flag) return null;
   
@@ -23,7 +25,7 @@ export const AbmRender = (props) => {
     };
   
     return (
-      <div className={getBackgroundColor}>
+      <div className={getBackgroundColor} id={themeName}>
         <div>
           <h1 className="abm-title">Super ABM</h1>
           <br></br>

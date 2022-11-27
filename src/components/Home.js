@@ -15,6 +15,7 @@ import { ReactForms } from "./ReactForms.js";
 import SyncedInputs from "./SyncedInputs.js";
 import ContextMain from "./ContextMain.js";
 import ThinkingInReact from "./ThinkingInReact.js";
+import { ErrorNotFound } from "./ErrorNotFound";
 
 import { useTheme } from "../contexts/ThemeProvider";
 import ReactSwitch from "react-switch";
@@ -31,14 +32,18 @@ const Home = () => {
     <div className="main" id={themeName}>
       <div className="head" id={themeName}>
         <Router>
-        <label className="labelSwitch">{themeName === "light" ? "Modo Claro" : "Modo Oscuro"}</label>
+          <label className="labelSwitch">
+            {themeName === "light" ? "Modo Claro" : "Modo Oscuro"}
+          </label>
           <div className="switch">
             <ReactSwitch
               onChange={toggleTheme}
               checked={themeName === "dark"}
             />
           </div>
-          <h1 className="h1" align="center" id={themeName}>Hedy Portfolio - Sebastian R. Costilla</h1>
+          <h1 className="h1" align="center" id={themeName}>
+            Hedy Portfolio - Sebastian R. Costilla
+          </h1>
           <div className="nest-header">
             <h4 id={themeName}>
               <Link to={"./RollTheDice"}>Actividad 1 - Girar el Dado</Link>
@@ -95,8 +100,12 @@ const Home = () => {
                   setFlag(e.target.checked);
                 }}
               />
-              <label className="label" id={themeName}>Activar CheckBox para renderizar</label>
-              <h4 className="h4" id={themeName}>Mostrará los valores de los input del punto 4</h4>
+              <label className="label" id={themeName}>
+                Activar CheckBox para renderizar
+              </label>
+              <h4 className="h4" id={themeName}>
+                Mostrará los valores de los input del punto 4
+              </h4>
               <p />
               <Link to={"./AbmFetch"}>Actividad 8 - Fetch </Link>
               <p />
@@ -117,11 +126,11 @@ const Home = () => {
               </Link>
             </h4>
             <Routes>
-              <Route path="/RollTheDice" element={<RollTheDice />} />
-              <Route path="/Welcome" element={<Welcome name={getName} />} />
-              <Route path="/UsersComponent" element={<UsersComponent />} />
+              <Route exact path="/RollTheDice" element={<RollTheDice />} />
+              <Route exact path="/Welcome" element={<Welcome name={getName} />} />
+              <Route exact path="/UsersComponent" element={<UsersComponent />} />
               <Route
-                path="/UsersFunction"
+                exact path="/UsersFunction"
                 element={
                   <UsersFunction
                     userName={getUserName}
@@ -130,10 +139,10 @@ const Home = () => {
                   />
                 }
               />
-              <Route path="/Cars" element={<Cars />} />
-              <Route path="/AsyncFunction" element={<AsyncFunction />} />
+              <Route exact path="/Cars" element={<Cars />} />
+              <Route exact path="/AsyncFunction" element={<AsyncFunction />} />
               <Route
-                path="/AbmRender"
+                exact path="/AbmRender"
                 element={
                   <AbmRender
                     flag={getFlag}
@@ -143,13 +152,15 @@ const Home = () => {
                   />
                 }
               />
-              <Route path="/AbmFetch" element={<AbmFetch />} />
-              <Route path="/AbmAxios" element={<AbmAxios />} />
-              <Route path="/EventParagraph" element={<EventParagraph />} />
-              <Route path="/ReactForms" element={<ReactForms />} />
-              <Route path="/SyncedInputs" element={<SyncedInputs />} />
-              <Route path="/ContextMain" element={<ContextMain />} />
-              <Route path="/ThinkingInReact" element={<ThinkingInReact />} />
+              <Route exact path="/AbmFetch" element={<AbmFetch />} />
+              <Route exact path="/AbmAxios" element={<AbmAxios />} />
+              <Route exact path="/EventParagraph" element={<EventParagraph />} />
+              <Route exact path="/ReactForms" element={<ReactForms />} />
+              <Route exact path="/SyncedInputs" element={<SyncedInputs />} />
+              <Route exact path="/ContextMain" element={<ContextMain />} />
+              <Route exact path="/ThinkingInReact" element={<ThinkingInReact />} />
+              <Route path="*" element={<ErrorNotFound />} component={ErrorNotFound} />
+                
             </Routes>
           </div>
         </Router>
