@@ -1,10 +1,4 @@
 import react, { useState } from "react";
-import dice1 from "../img/dice1.jpg"
-import dice2 from "../img/dice2.jpg"
-import dice3 from "../img/dice3.jpg"
-import dice4 from "../img/dice4.jpg"
-import dice5 from "../img/dice5.jpg"
-import dice6 from "../img/dice6.jpg"
 import "../App.css";
 import { useParams } from "react-router-dom";
 
@@ -18,22 +12,22 @@ export const RollTheDice = () => {
 
     switch (value.toString()) {
       case "1":
-        setDice(dice1);
+        setDice('https://i.ibb.co/6FGykY6/dice1.jpg');
         break;
         case "2":
-          setDice(dice2);
+          setDice('https://i.ibb.co/kXDVcj6/dice2.jpg');
         break;
         case "3":
-          setDice(dice3);
+          setDice('https://i.ibb.co/5TtzYw0/dice3.jpg');
         break;
         case "4":
-          setDice(dice4);
+          setDice('https://i.ibb.co/NVzdTNC/dice4.jpg');
         break;
         case "5":
-          setDice(dice5);
+          setDice('https://i.ibb.co/8cZBrT0/dice5.jpg');
         break;
         case "6":
-          setDice(dice6);
+          setDice('https://i.ibb.co/55Y2h87/dice6.jpg');
         break;
     }
     setValue(value);
